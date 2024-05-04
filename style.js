@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     mainContainer: {
-        backgroundColor: '#DBAFA0',
+        backgroundColor: '#FFFFFF',
     },
     textSign: {
         fontSize: 18,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     loginContainer: {
-        backgroundColor: '#fff',
+        backgroundColor: '#FFFFFF',
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         paddingHorizontal: 20,
@@ -111,6 +111,59 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         marginTop: 5,
     },
+    textBig: {
+        color: 'black',
+        fontSize: 20,
+        marginTop: 20,
+        textAlign: "center"
+    },
+    textSmall: {
+        color: 'black',
+        fontSize: 15,
+        marginTop: 5,
+        textAlign: "center"
+    },
+    ButtonFill : {
+        justifyContent: "center",
+        width: '85%',
+        height: '5%',
+        backgroundColor: '#2566FE',
+        alignItems: 'center',
+        // paddingHorizontal: 20,
+        // paddingVertical: 15,
+        borderRadius: 10,
+        // shadowColor: '#2566FE',
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 6,
+        // },
+        shadowOpacity: 0.37,
+        shadowRadius: 7.49,
+        elevation: 12,
+    },
+
+    ButtonNoFill : {
+        width: '85%',
+        height: '5%',
+        justifyContent: "center",
+        backgroundColor: '#FFFFFF',
+        alignItems: 'center',
+        // paddingHorizontal: 20,
+        // paddingVertical: 15,
+        borderRadius: 10,
+        // shadowColor: '#2566FE',
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 6,
+        // },
+        shadowOpacity: 0.37,
+        shadowRadius: 7.49,
+        elevation: 12,
+        borderColor: "#2566FE",
+        borderWidth: 2
+    },
+    
+    
 });
 
 export default styles;
