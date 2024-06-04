@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import styles from '../style'
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import * as WebBrowser from 'expo-web-browser';
+
 
 export default function Register(props) {
     const [name, setName] = useState('');

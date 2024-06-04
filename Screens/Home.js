@@ -11,6 +11,8 @@
 
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome'
+import * as WebBrowser from 'expo-web-browser';
+
 import React from 'react'
 import styles from '../style';
 import { useNavigation } from '@react-navigation/native';

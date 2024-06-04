@@ -14,7 +14,6 @@ import FacebookPage from './Screens/FacebookPage';
 import LinkedInPage from './Screens/LinkedInPage';
 
 
-
 export default function App() {
   const Stack = createStackNavigator()
 
