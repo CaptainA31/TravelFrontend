@@ -10,6 +10,8 @@ import Register from './Screens/Register';
 import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
 import AsyncStorage  from '@react-native-async-storage/async-storage';
+import FacebookPage from './Screens/FacebookPage';
+import LinkedInPage from './Screens/LinkedInPage';
 
 
 
@@ -19,10 +21,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="GooglePage" component={GooglePage} />
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Register' component={Register} />
+        <Stack.Screen name="GooglePage" component={GooglePage} />
+        <Stack.Screen name="FacebookPage" component={FacebookPage} />
+        <Stack.Screen name="LinkedInPage" component={LinkedInPage} />
+        
+        
         
       </Stack.Navigator>
     </NavigationContainer>

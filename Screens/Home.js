@@ -10,10 +10,22 @@
 
 
 import { View, Text, Image, TouchableOpacity } from 'react-native'
+import FontAwesome from '@expo/vector-icons/FontAwesome'
 import React from 'react'
 import styles from '../style';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Home() {
+  
+  const navigation = useNavigation()
+
+
+  function handleSignIn(){
+    console.log('Sign in button pressed');
+    navigation.navigate("Login");
+  }
+
+
   return (
     <View style={[styles.mainContainer, { flex: 1, justifyContent: "center", alignItems: "center" }]}>
       <View>
@@ -22,9 +34,10 @@ export default function Home() {
           style={[styles.logo, {height: 260, width: 260, marginTop: -20}]}
         />
       </View>
+      
         <Text style={[styles.textBig]}>Already have an Inume Account</Text>
         <Text style={styles.textSmall}>Start Touring where you left off</Text>
-        <TouchableOpacity style={[styles.ButtonFill, { marginTop: 20 }]}>
+        <TouchableOpacity style={[styles.ButtonFill, { marginTop: 20 }]} onPress={handleSignIn}>
           <Text style={styles.textSign}>SIGN IN</Text>
         </TouchableOpacity>
         <Text style={[styles.textBig, {marginTop: 80}]}>New to Inume?</Text>
@@ -33,5 +46,6 @@ export default function Home() {
           <Text style={[styles.textSign, {color: "#2566FE"}]}>GET STARTED</Text>
         </TouchableOpacity>
     </View>
+    
   );
 }

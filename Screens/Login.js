@@ -30,8 +30,21 @@ export default function Login(props) {
             })
     }
 
+
+    function handleGoogle(){
+        navigation.navigate("GooglePage")
+    }
+
+    function handleFacebook(){
+        navigation.navigate("FacebookPage")
+    }
+
+    function handleLinkedIn(){
+        navigation.navigate("LinkedInPage")
+    }
+
     return (
-        <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps= "always">
+        <ScrollView contentContainerStyle={{flexGrow: 1}} keyboardShouldPersistTaps= "always" style={[styles.loginContainer, { backgroundColor: '#FFFFFF'}]}>
             <View>
                 <View style={styles.loginContainer}>
                     <Text style={styles.text_header}>
@@ -49,7 +62,7 @@ export default function Login(props) {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.button}>
-                    <TouchableOpacity style={styles.inBut} onPress={() => handleSubmit()}>
+                    <TouchableOpacity style={[styles.inBut,styles.button]} onPress={() => handleSubmit()}>
                         <Text style={styles.textSign}>
                             Log in
                         </Text>
@@ -62,19 +75,19 @@ export default function Login(props) {
                     </View>
 
                     <View style={styles.bottomButton}>
-                        <TouchableOpacity style={styles.inBut2}>
+                        <TouchableOpacity style={styles.inBut2} onPress={handleGoogle}>
                             <FontAwesome name="google" size={24} color="white" />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.inBut2}>
+                        <TouchableOpacity style={styles.inBut2} onPress={handleFacebook}>
                             <FontAwesome name="facebook" size={24} color="white" />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.inBut2}>
+                        {/* <TouchableOpacity style={styles.inBut2}>
                             <FontAwesome name="twitter" size={24} color="white" />
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
 
-                        <TouchableOpacity style={styles.inBut2}>
+                        <TouchableOpacity style={styles.inBut2} onPress={handleLinkedIn}>
                             <FontAwesome name="linkedin" size={24} color="white" />
                         </TouchableOpacity>
                     </View>
