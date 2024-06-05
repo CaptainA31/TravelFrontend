@@ -2,8 +2,6 @@ import { View, Text, TextInput, TouchableOpacity, ScrollView, Alert } from 'reac
 import React, { useState } from 'react'
 import styles from '../style'
 import { useNavigation } from '@react-navigation/native'
-import * as WebBrowser from 'expo-web-browser';
-
 import axios from 'axios'
 import ip from '../ipconfig'
 import FontAwesome from '@expo/vector-icons/FontAwesome'

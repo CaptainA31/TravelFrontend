@@ -27,6 +27,10 @@ export default function Home() {
     navigation.navigate("Login");
   }
 
+  function handleGetStarted(){
+    navigation.navigate("SelectCity")
+  }
+
 
   return (
     <View style={[styles.mainContainer, { flex: 1, justifyContent: "center", alignItems: "center" }]}>
@@ -44,7 +48,7 @@ export default function Home() {
         </TouchableOpacity>
         <Text style={[styles.textBig, {marginTop: 80}]}>New to Inume?</Text>
         <Text style={styles.textSmall}>Start Touring now.</Text>
-        <TouchableOpacity style={[styles.ButtonNoFill, { marginTop: 20 }]}>
+        <TouchableOpacity style={[styles.ButtonNoFill, { marginTop: 20 }]} onPress={handleGetStarted}>
           <Text style={[styles.textSign, {color: "#2566FE"}]}>GET STARTED</Text>
         </TouchableOpacity>
     </View>

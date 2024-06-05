@@ -12,6 +12,10 @@ import * as Google from "expo-auth-session/providers/google";
 import AsyncStorage  from '@react-native-async-storage/async-storage';
 import FacebookPage from './Screens/FacebookPage';
 import LinkedInPage from './Screens/LinkedInPage';
+import SelectCity from './Screens/SelectCity';
+import Main from './Screens/Main';
+import SubjectPreferences from './Screens/SubjectPreferences';
+import UserPreferences from './Screens/UserPreferences';
 
 
 export default function App() {
@@ -20,12 +24,17 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="SelectCity" component={SelectCity} />
+        
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name="GooglePage" component={GooglePage} />
         <Stack.Screen name="FacebookPage" component={FacebookPage} />
-        <Stack.Screen name="LinkedInPage" component={LinkedInPage} />
+
+        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="SubjectPreferences" component={SubjectPreferences} />
+        <Stack.Screen name="UserPreferences" component={UserPreferences} />
         
         
         
