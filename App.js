@@ -13,32 +13,50 @@ import AsyncStorage  from '@react-native-async-storage/async-storage';
 import FacebookPage from './Screens/FacebookPage';
 import LinkedInPage from './Screens/LinkedInPage';
 import SelectCity from './Screens/SelectCity';
-import Main from './Screens/Main';
 import SubjectPreferences from './Screens/SubjectPreferences';
 import UserPreferences from './Screens/UserPreferences';
+import NamePage from './Screens/NamePage';
+import EmailPage from './Screens/EmailPage';
+import PasswordPage from './Screens/PasswordPage';
+import UserLocation from './Screens/userLocation';
+import HomeScreen from './Screens/HomeScreen';
+
 
 
 export default function App() {
   const Stack = createStackNavigator()
-
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="SelectCity" component={SelectCity} />
-        
         <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+
+        <Stack.Screen name="UserLocation" component={UserLocation} />
+        
+
+        <Stack.Screen name="EmailPage" component={EmailPage} />
+        <Stack.Screen name="NamePage" component={NamePage} />
+        <Stack.Screen name="PasswordPage" component={PasswordPage} />
+        
+        
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name="GooglePage" component={GooglePage} />
         <Stack.Screen name="FacebookPage" component={FacebookPage} />
 
-        <Stack.Screen name="Main" component={Main} />
-        <Stack.Screen name="SubjectPreferences" component={SubjectPreferences} />
+        <Stack.Screen name="SelectCity" component={SelectCity} />
         <Stack.Screen name="UserPreferences" component={UserPreferences} />
+        <Stack.Screen name="SubjectPreferences" component={SubjectPreferences} />
+
+
+        
+
         
         
         
       </Stack.Navigator>
+
+
     </NavigationContainer>
   )
 }

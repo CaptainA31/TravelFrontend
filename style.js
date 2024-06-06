@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    height: 90,  // Adjusted to fit within the header line
-    width: 90,   // Adjusted to fit within the header line
+    height: 90, // Adjusted to fit within the header line
+    width: 90,  // Adjusted to fit within the header line
     marginTop: 50,
     marginLeft: 10,
     marginRight: 10,
@@ -29,18 +29,19 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   action: {
+    width: '85%',
+    height: 50,
     flexDirection: 'row',
-    paddingTop: 18,
-    paddingBottom: 8,
-    marginTop: 15,
+    marginTop: 10,
     paddingHorizontal: 20,
-    borderWidth: 1,
-    borderColor: '#BB8493',
-    borderRadius: 50,
+    borderWidth: 1.5,
+    borderColor: 'black',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   textInput: {
     flex: 1,
-    marginTop: -10,
     color: '#49243E',
     fontSize: 16,
   },
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     paddingHorizontal: 10,
     paddingVertical: 20,
+    flex: 1,
   },
   header: {
     flexDirection: 'row',
@@ -58,6 +60,56 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     backgroundColor: '#FFFFFF',
     borderColor: '#DDDDDD',
+  },
+  
+  backButton: {
+    marginTop: -10,
+    marginBottom: 10,
+    marginLeft: -20,
+    height: 50,
+    width: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
+  },
+  text_header: {
+    color: '#49243E',
+    fontSize: 18,
+    textAlign: 'center',
+    flex: 1,
+    padding: 15,
+    backgroundColor: '#EFF8FF',
+  },
+  roundedText: {
+    borderRadius: 15,
+    borderColor: 'black',
+    borderWidth: 1,
+  },
+  inputContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  label: {
+    fontSize: 18,
+    alignSelf: 'flex-start',
+    marginLeft: '7.5%', // Align label with TextInput
+    marginBottom: 5,
+  },
+  buttonContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  ButtonFill: {
+    justifyContent: 'center',
+    width: '85%',
+    height: 50,
+    backgroundColor: '#2566FE',
+    alignItems: 'center',
+    borderRadius: 10,
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+    elevation: 12,
   },
   backButton: {
     // backgroundColor: '#704264',
@@ -79,15 +131,7 @@ const styles = StyleSheet.create({
     // elevation: 12,
     marginRight: 10,
   },
-  text_header: {
-    color: '#49243E',
-    // fontWeight: 'bold',
-    fontSize: 18,
-    textAlign: 'center',
-    flex: 1, // Allow the text to take up remaining space
-    padding: 15, // Add padding for better appearance
-    backgroundColor: '#EFF8FF',
-  },
+  
   roundedText: {
     borderRadius: 15, // Add border radius for rounded corners
     borderColor: 'black', // Set border color to black
@@ -173,10 +217,12 @@ const styles = StyleSheet.create({
     marginTop: 5,
     textAlign: 'center',
   },
+
+
   ButtonFill: {
     justifyContent: 'center',
     width: '85%',
-    height: '5%',
+    height: 50,
     backgroundColor: '#2566FE',
     alignItems: 'center',
     borderRadius: 10,
@@ -196,6 +242,100 @@ const styles = StyleSheet.create({
     elevation: 12,
     borderColor: '#2566FE',
     borderWidth: 2,
+  },
+
+  itemContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+  },
+  icon: {
+    marginRight: 10,
+  },
+  itemText: {
+    fontSize: 18,
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  container: {
+    flex: 1,
+    backgroundColor: '#FFF',
+    paddingTop: 0, // Handle safe area manually
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    backgroundColor: '#FFF',
+  },
+  smallLogo: {
+    width: 30,
+    height: 30,
+    marginLeft: 10,
+  },
+  headerText: {
+    flex: 1,
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  rightLogo: {
+    width: 30,
+    height: 30,
+    marginRight: 10,
+  },
+  chatContainer: {
+    flex: 1,
+    padding: 10,
+  },
+  appMessage: {
+    backgroundColor: '#EEE',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 5,
+    width: '80%',
+  },
+  optionsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    marginVertical: 20,
+  },
+  optionBox: {
+    width: '48%',
+    backgroundColor: '#EFF8FF',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  chatInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    borderTopWidth: 1,
+    borderTopColor: '#DDD',
+  },
+  chatInput: {
+    flex: 1,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#CCC',
+    borderRadius: 20,
+    marginRight: 10,
+  },
+  cameraButton: {
+    padding: 10,
   },
 });
 
